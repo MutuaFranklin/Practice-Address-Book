@@ -69,7 +69,7 @@ $(document).ready(function() {
       $(".last-name").text(newContact.lastName);
       $("ul#addresses").text("");
       newContact.addresses.forEach(function(address) {
-        $("ul#addresses").append("<li>" + address.streetName + ", " + address.cityName + ", " + address.countyName + "</li>") .hide().fadeIn(2000);
+        $("ul#addresses").append("<li>" + address.streetName + ", " + address.cityName + ", " + address.countyName + "</li>") .hide().fadeIn(2000).css("color" ,"lightblue");
       });
     });
 
