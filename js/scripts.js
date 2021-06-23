@@ -17,6 +17,13 @@ Address.prototype.fullAddress = function(){
   return this.streetName + ", " + this.cityName + ", " + this.countyName;
 }
 
+// function resetFields() {
+//     $("input#new-first-name").val("");
+//     $("input#new-last-name").val("");
+//     $("input.new-street").val("");
+//     $("input.new-city").val("");
+//     $("input.new-county").val("");
+// }
 
 $(document).ready(function() {
 
@@ -52,7 +59,7 @@ $(document).ready(function() {
       newContact.addresses.push(newAddress)
     });
 
-    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + " (Click here for full details)" + "</span></li>");
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + " (Click here for full details)" + "</span></li>") .hide().fadeIn(2000);
 
 
     $(".contact").last().click(function() {
@@ -62,7 +69,7 @@ $(document).ready(function() {
       $(".last-name").text(newContact.lastName);
       $("ul#addresses").text("");
       newContact.addresses.forEach(function(address) {
-        $("ul#addresses").append("<li>" + address.streetName + ", " + address.cityName + ", " + address.countyName + "</li>");
+        $("ul#addresses").append("<li>" + address.streetName + ", " + address.cityName + ", " + address.countyName + "</li>") .hide().fadeIn(2000);
       });
     });
 
